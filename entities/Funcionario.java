@@ -28,7 +28,7 @@ public class Funcionario {
     }
 
    public double aumentoSalarial() {
-       System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI RECEBER DE SALÁRIO: ");
+       System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI UM BÔNUS E SEU SALÁRIO VAI SER: ");
        return this.salario = salario + 0;
    }
 
