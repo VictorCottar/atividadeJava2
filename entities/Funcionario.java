@@ -8,6 +8,9 @@ public class Funcionario {
     private String nome;
     private String cpf;
     private double salario;
+    private Integer mesesProjeto;
+    private String nomeProjeto;
+    private String funcaoProjeto;
 
 
     public Funcionario(String nome, String cpf, double salario) {
@@ -16,7 +19,11 @@ public class Funcionario {
         this.salario = salario;
     }
 
-
+    public void Projeto(String nomeProjeto, String funcaoProjeto, Integer mesesProjeto) {
+        this.nomeProjeto = nomeProjeto;
+        this.mesesProjeto = mesesProjeto;
+        this.funcaoProjeto = funcaoProjeto;
+    }
     public String toString() {
         return nome + ", " + cpf + ", " + String.format("%.2f", salario);
     }
@@ -27,10 +34,11 @@ public class Funcionario {
         System.exit(0);
     }
 
-   public double aumentoSalarial() {
-       System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI UM BÔNUS E SEU SALÁRIO VAI SER: ");
-       return this.salario = salario + 0;
-   }
+    public double aumentoSalarial() {
+        System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI UM BÔNUS E SEU SALÁRIO VAI SER:");
+        return this.salario = salario + 0;
+    }
+
 
 
 

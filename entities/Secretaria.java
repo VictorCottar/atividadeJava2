@@ -9,6 +9,6 @@ public class Secretaria extends Funcionario {
 
     @Override
     public double aumentoSalarial() {
-        return super.aumentoSalarial() + 2000;
+        return super.aumentoSalarial() + getSalario() * 0.08;
     }
 }
