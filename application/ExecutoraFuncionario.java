@@ -79,7 +79,6 @@ public class ExecutoraFuncionario {
             } else if (scCargo == 2) {
                 System.out.println();
                 System.out.println("DIGITE SEUS DADOS: ");
-                System.out.println();
                 System.out.println("NOME ");
                 sc.nextLine();
                 String nome = sc.nextLine();
@@ -121,7 +120,6 @@ public class ExecutoraFuncionario {
             } else {
                 System.out.println();
                 System.out.println("DIGITE SEUS DADOS: ");
-                System.out.println();
                 System.out.println("NOME ");
                 sc.nextLine();
                 String nome = sc.nextLine();
@@ -138,32 +136,27 @@ public class ExecutoraFuncionario {
                     System.out.println();
                     System.out.println("CERTO " + productOwner.getNome() + ", COMO PRODUCT OWNER VOCÊ PODE FAZER ESSAS AÇÕES: ");
                     System.out.println("1 - CRIAR TAREFAS ");
-                    System.out.println("2 - VISUALIZAR POSSÍVEL AUMENTO ");
-                    System.out.println("3 - FINALIZAR MENU");
+                    System.out.println("2");
+                    System.out.println("3 - VISUALIZAR POSSÍVEL AUMENTO ");
+                    System.out.println("4 - FINALIZAR MENU");
                     int scMenuPo = sc.nextInt();
 
-                    if (scMenuPo < 0 || scMenuPo > 3) {
+                    if (scMenuPo < 0 || scMenuPo > 4) {
                         System.out.println("O SCRUM MASTER TEM APENAS 4 AÇÕES!");
                     } else {
                         if (scMenuPo == 1) {
-
+                            productOwner.criarTarefas();
                         } else if (scMenuPo == 2) {
-                            System.out.println();
+
+                        } else if (scMenuPo == 3) {
                             System.out.println(productOwner.aumentoSalarial());
-                            System.out.println();
                         } else {
                             finalizarMenu();
                         }
                     }
                 } while (acoesPo == 0);
-
-
             }
-
-
         }
-
-
     }
 }
 

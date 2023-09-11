@@ -45,28 +45,30 @@ public class ProductOwner extends Funcionario {
 
     @Override
     public final double aumentoSalarial() {
+        System.out.println();
         return super.aumentoSalarial() + getSalario() * 0.15;
     }
 
-    public  void criarTarefas() {
+    public void criarTarefas() {
         System.out.println();
         System.out.println("NOME DA TAREFA: ");
+        sc.next();
         String nomeTarefa = sc.nextLine();
         System.out.println("DESCRIÇÃO DA TAREFA: ");
-        sc.nextLine();
         String descricaoTarefa = sc.nextLine();
         System.out.println("PRIORIDADE DA TAREFA DE ACORDO COM A TABELA DE PONTOS FIBONACCI (1/2/3/5/8/13/21): ");
         int pontoTarefa = sc.nextInt();
 
         String tarefa = "NOME DA TAREFA: " + nomeTarefa + "\n"
-                + "DESCRIÇÃO DA TAREFA: " + descricaoTarefa +  "\n"
+                + "DESCRIÇÃO DA TAREFA: " + descricaoTarefa + "\n"
                 + "PRIORIDADE DA TAREFA: " + pontoTarefa;
 
         backlogDoProduto.add(tarefa);
 
         System.out.println();
-        for(String pb : backlogDoProduto) {
+        for (String pb : backlogDoProduto) {
             System.out.println(pb);
+            System.out.println();
         }
         System.out.println();
     }
