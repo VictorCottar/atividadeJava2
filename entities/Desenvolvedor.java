@@ -8,13 +8,24 @@ import java.util.Scanner;
 
 public class Desenvolvedor extends Funcionario {
 
+    private String nomeProjeto;
+    private Integer mesesProjeto;
+    private String funcaoProjeto;
+
     private List<String> linguagem = new ArrayList<>();
     private List<String> listaProjetos = new ArrayList<>();
-    ;
+
     Scanner sc = new Scanner(System.in);
 
     public Desenvolvedor(String nome, String cpf, double salario) {
         super(nome, cpf, salario);
+    }
+
+
+    public void Projeto(String nomeProjeto, String funcaoProjeto, Integer mesesProjeto) {
+        this.nomeProjeto = nomeProjeto;
+        this.mesesProjeto = mesesProjeto;
+        this.funcaoProjeto = funcaoProjeto;
     }
 
 
@@ -64,7 +75,7 @@ public class Desenvolvedor extends Funcionario {
     }
 
     @Override
-    public double aumentoSalarial() {
+    public final double aumentoSalarial() {
         return super.aumentoSalarial() + getSalario() * 0.15;
     }
 }

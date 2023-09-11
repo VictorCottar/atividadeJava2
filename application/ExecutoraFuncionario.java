@@ -2,9 +2,8 @@ package application;
 
 import entities.Desenvolvedor;
 import entities.Gerente;
-import entities.Secretaria;
+import entities.ProductOwner;
 
-import java.sql.SQLOutput;
 import java.text.ParseException;
 import java.util.Scanner;
 
@@ -25,7 +24,7 @@ public class ExecutoraFuncionario {
         System.out.println("QUAL O SEU CARGO NA EMPRESA?");
         System.out.println("1 - GERENTE");
         System.out.println("2 - DESENVOLVEDOR");
-        System.out.println("3 - SECRETÁRIA");
+        System.out.println("3 - SCRUM MASTER");
         int scCargo = sc.nextInt();
 
         if (scCargo < 0 || scCargo > 3) {
@@ -102,7 +101,7 @@ public class ExecutoraFuncionario {
                     int scMenuDesenvolvedor = sc.nextInt();
 
                     if (scMenuDesenvolvedor < 0 || scMenuDesenvolvedor > 4) {
-                        System.out.println("O ESTAGAIRIO TEM APENAS 4 AÇÕES!");
+                        System.out.println("O DESENVOLVEDOR TEM APENAS 4 AÇÕES!");
                     } else {
                         if (scMenuDesenvolvedor == 1) {
                             desenvolvedor.linguagemAprendidas();
@@ -130,33 +129,33 @@ public class ExecutoraFuncionario {
                 String cpf = sc.nextLine();
                 System.out.println("SALÁRIO ");
                 double salario = sc.nextDouble();
-                Secretaria secretaria = new Secretaria(nome, cpf, salario);
+                ProductOwner productOwner = new ProductOwner(nome, cpf, salario);
                 System.out.println();
                 System.out.println();
 
-                int acoesSecretaria = 0;
+                int acoesPo = 0;
                 do {
                     System.out.println();
-                    System.out.println("CERTO " + secretaria.getNome() + ", COMO SECRETÁRIA VOCÊ PODE FAZER ESSAS AÇÕES: ");
-                    System.out.println("1"); // alguma funcionalidade para secretária.(essa funcionalidade é um método)
+                    System.out.println("CERTO " + productOwner.getNome() + ", COMO PRODUCT OWNER VOCÊ PODE FAZER ESSAS AÇÕES: ");
+                    System.out.println("1 - CRIAR TAREFAS ");
                     System.out.println("2 - VISUALIZAR POSSÍVEL AUMENTO ");
                     System.out.println("3 - FINALIZAR MENU");
-                    int scMenuSecretaria = sc.nextInt();
+                    int scMenuPo = sc.nextInt();
 
-                    if (scMenuSecretaria < 0 || scMenuSecretaria > 3) {
-                        System.out.println("A SECRETÁRIA TEM APENAS 3 AÇÕES!");
+                    if (scMenuPo < 0 || scMenuPo > 3) {
+                        System.out.println("O SCRUM MASTER TEM APENAS 4 AÇÕES!");
                     } else {
-                        if (scMenuSecretaria == 1) {
-                            // aqui vai estar o método que corresponde a opçao 1. (execução do método 1)
-                        } else if (scMenuSecretaria == 2) {
+                        if (scMenuPo == 1) {
+
+                        } else if (scMenuPo == 2) {
                             System.out.println();
-                            System.out.println(secretaria.aumentoSalarial());
+                            System.out.println(productOwner.aumentoSalarial());
                             System.out.println();
                         } else {
                             finalizarMenu();
                         }
                     }
-                } while (acoesSecretaria == 0);
+                } while (acoesPo == 0);
 
 
             }

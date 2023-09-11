@@ -19,11 +19,7 @@ public class Funcionario {
         this.salario = salario;
     }
 
-    public void Projeto(String nomeProjeto, String funcaoProjeto, Integer mesesProjeto) {
-        this.nomeProjeto = nomeProjeto;
-        this.mesesProjeto = mesesProjeto;
-        this.funcaoProjeto = funcaoProjeto;
-    }
+
     public String toString() {
         return nome + ", " + cpf + ", " + String.format("%.2f", salario);
     }
