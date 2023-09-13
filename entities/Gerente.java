@@ -17,12 +17,13 @@ public class Gerente extends Funcionario {
         super(nome, cpf, salario);
     }
 
-
     public static String objetivos() {
+        System.out.println();
         System.out.println("DIGITE O OBJETIVO DA EMPRESA: ");
         String objetivos = sc.nextLine();
         System.out.println();
         System.out.println("O OBJETIVO DA NOSSA EMPRESA É: " + objetivos);
+        System.out.println();
         return objetivos;
     }
 
@@ -36,14 +37,13 @@ public class Gerente extends Funcionario {
         String pauta = sc.nextLine();
         System.out.println();
         System.out.println("REUNIÃO MARCADA PELO GERENTE " + Gerente.super.getNome() + ", NA DATA: " + sdf.format(dataReuniao) + ", COM A PAUTA: " + pauta);
+        System.out.println();
         return marcarReuniao;
     }
-
 
     @Override
     public double aumentoSalarial() {
         return super.aumentoSalarial() + getSalario() * 0.20;
-
     }
 
     public static int voltarMenuGerente() {
@@ -58,10 +58,8 @@ public class Gerente extends Funcionario {
         if (scVoltarMenu == 1) {
             while (acoesGerente != 0) ;
         }
-
         return scVoltarMenu;
     }
-
 
     public String getObjetivos() {
         return objetivos;
@@ -70,6 +68,4 @@ public class Gerente extends Funcionario {
     public void setObjetivos(String metas) {
         this.objetivos = metas;
     }
-
-
 }

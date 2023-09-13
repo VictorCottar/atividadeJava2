@@ -45,14 +45,13 @@ public class ProductOwner extends Funcionario {
 
     @Override
     public final double aumentoSalarial() {
-        System.out.println();
         return super.aumentoSalarial() + getSalario() * 0.15;
     }
 
     public void criarTarefas() {
         System.out.println();
         System.out.println("NOME DA TAREFA: ");
-        sc.next();
+        sc.nextLine();
         String nomeTarefa = sc.nextLine();
         System.out.println("DESCRIÇÃO DA TAREFA: ");
         String descricaoTarefa = sc.nextLine();
@@ -63,13 +62,34 @@ public class ProductOwner extends Funcionario {
                 + "DESCRIÇÃO DA TAREFA: " + descricaoTarefa + "\n"
                 + "PRIORIDADE DA TAREFA: " + pontoTarefa;
 
+        System.out.println();
+        System.out.println("VOLTE PARA O MENU, E VISUALIZE AS TAREFAS CRIADAS NA AÇÃO NÚMERO 2!");
+        System.out.println();
         backlogDoProduto.add(tarefa);
 
+    }
+
+    public void visualizarTarefas() {
+        System.out.println();
+        System.out.println("AQUI ESTÃO AS TAREFAS DO PRODUCT BACKLOG: ");
         System.out.println();
         for (String pb : backlogDoProduto) {
             System.out.println(pb);
             System.out.println();
         }
-        System.out.println();
+    }
+
+    public static int voltarMenuPo() {
+        Scanner sc = new Scanner(System.in);
+        int scVoltarMenu;
+        int acoesPo = 0;
+
+        System.out.println("DIGITE 1 PARA RETORNAR AS AÇÕES DO DESENVOLVEDOR: ");
+        scVoltarMenu = sc.nextInt();
+
+        if (scVoltarMenu == 1) {
+            while (acoesPo != 0) ;
+        }
+        return scVoltarMenu;
     }
 }

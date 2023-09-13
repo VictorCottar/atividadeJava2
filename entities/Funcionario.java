@@ -19,7 +19,6 @@ public class Funcionario {
         this.salario = salario;
     }
 
-
     public String toString() {
         return nome + ", " + cpf + ", " + String.format("%.2f", salario);
     }
@@ -31,12 +30,10 @@ public class Funcionario {
     }
 
     public double aumentoSalarial() {
-        System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI UM BÔNUS E SEU SALÁRIO VAI SER:");
+        System.out.println();
+        System.out.println("SE TUDO OCORRER BEM, NO FINAL DO ANO VOCÊ VAI RECEBER UM BÔNUS E SEU SALÁRIO VAI SER:");
         return this.salario = salario + 0;
     }
-
-
-
 
     public String getNome() {
         return nome;
@@ -61,6 +58,4 @@ public class Funcionario {
     public void setSalario(double salario) {
         this.salario = salario;
     }
-
-
 }
