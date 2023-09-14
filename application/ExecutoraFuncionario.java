@@ -39,7 +39,6 @@ public class ExecutoraFuncionario {
                 System.out.println();
                 System.out.println("DIGITE SEUS DADOS: ");
                 System.out.println("NOME ");
-                sc.nextLine();
                 String nome = sc.nextLine();
                 System.out.println("CPF ");
                 String cpf = sc.nextLine();

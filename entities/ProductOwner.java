@@ -49,9 +49,9 @@ public class ProductOwner extends Funcionario {
     }
 
     public void criarTarefas() {
+        Scanner sc = new Scanner(System.in);
         System.out.println();
         System.out.println("NOME DA TAREFA: ");
-        sc.nextLine();
         String nomeTarefa = sc.nextLine();
         System.out.println("DESCRIÇÃO DA TAREFA: ");
         String descricaoTarefa = sc.nextLine();
@@ -86,7 +86,7 @@ public class ProductOwner extends Funcionario {
 
         System.out.println("DIGITE 1 PARA RETORNAR AS AÇÕES DO DESENVOLVEDOR: ");
         scVoltarMenu = sc.nextInt();
-
+        System.out.println();
         if (scVoltarMenu == 1) {
             while (acoesPo != 0) ;
         }
